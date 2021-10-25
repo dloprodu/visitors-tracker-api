@@ -1,0 +1,10 @@
+C:\Development\React Visitors\VisitorsTracker.API\VisitorsTracker.DBL\bin\Debug\netcoreapp3.1\VisitorsTracker.DBL.deps.json
+C:\Development\React Visitors\VisitorsTracker.API\VisitorsTracker.DBL\bin\Debug\netcoreapp3.1\VisitorsTracker.DBL.dll
+C:\Development\React Visitors\VisitorsTracker.API\VisitorsTracker.DBL\bin\Debug\netcoreapp3.1\VisitorsTracker.DBL.pdb
+C:\Development\React Visitors\VisitorsTracker.API\VisitorsTracker.DBL\obj\Debug\netcoreapp3.1\VisitorsTracker.DBL.csproj.AssemblyReference.cache
+C:\Development\React Visitors\VisitorsTracker.API\VisitorsTracker.DBL\obj\Debug\netcoreapp3.1\VisitorsTracker.DBL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Development\React Visitors\VisitorsTracker.API\VisitorsTracker.DBL\obj\Debug\netcoreapp3.1\VisitorsTracker.DBL.AssemblyInfoInputs.cache
+C:\Development\React Visitors\VisitorsTracker.API\VisitorsTracker.DBL\obj\Debug\netcoreapp3.1\VisitorsTracker.DBL.AssemblyInfo.cs
+C:\Development\React Visitors\VisitorsTracker.API\VisitorsTracker.DBL\obj\Debug\netcoreapp3.1\VisitorsTracker.DBL.csproj.CoreCompileInputs.cache
+C:\Development\React Visitors\VisitorsTracker.API\VisitorsTracker.DBL\obj\Debug\netcoreapp3.1\VisitorsTracker.DBL.dll
+C:\Development\React Visitors\VisitorsTracker.API\VisitorsTracker.DBL\obj\Debug\netcoreapp3.1\VisitorsTracker.DBL.pdb
