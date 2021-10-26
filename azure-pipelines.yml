@@ -25,4 +25,4 @@ steps:
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Build.ArtifactStagingDirectory)' 
-    artifactName: 'vsitorstrackerapi'
+    artifactName: 'visitorstrackerapi'
