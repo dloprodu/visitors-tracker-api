@@ -35,9 +35,18 @@ namespace VisitorsTracker.API.Controllers
         }
 
         [HttpGet, Route("visits/show")]
-        public async Task<ActionResult<(long total, List<Guest> result)>> Get([FromQuery] string userAgent, [FromQuery] string platform, [FromQuery] string language, [FromQuery] string country )
+        public async Task<ActionResult<(long total, List<Guest> result)>> Get(
+            [FromQuery] int offset,
+            [FromQuery] int limit,
+            [FromQuery] string userAgent,
+            [FromQuery] string platform,
+            [FromQuery] string language,
+            [FromQuery] string country
+        )
         {
             var result = await (new FetchGuestsManager(this._service, new FetchGuestInput { 
+                offset = offset,
+                limit = limit,
                 userAgent = userAgent,
                 platform = platform,
                 language = language,

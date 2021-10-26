@@ -10,7 +10,7 @@ namespace VisitorsTracker.Models
     /**
      * Collects all the information to be tracked.
      */
-    public class Guest: IGuest
+    public class Guest
     {
         /**
          * Unique ID.
@@ -62,13 +62,28 @@ namespace VisitorsTracker.Models
         public string Country { get; set; }
 
         /**
+         * Country name
+         */
+        public string CountryName { get; set; }
+
+        /**
          * Continent ISO code
          */
         public string Continent { get; set; }
 
         /**
+         * Continent name
+         */
+        public string ContinentName { get; set; }
+
+        /**
          * Region ISO code
          */
         public string Region { get; set; }
+
+        /**
+         * Region name
+         */
+        public string RegionName { get; set; }
     }
 }
