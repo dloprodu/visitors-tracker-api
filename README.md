@@ -1,5 +1,5 @@
 
-# Build solutiom
+# Build solution
 dotnet publish -c Release
 
 # Docker build
