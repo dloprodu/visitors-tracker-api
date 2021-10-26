@@ -7,8 +7,8 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
-COPY ["VisitorsTracker.API.csproj", "VisitorsTracker.API/"]
-RUN dotnet restore "VisitorsTracker.API.csproj"
+COPY ["VisitorsTracker.API/VisitorsTracker.API.csproj", "VisitorsTracker.API/"]
+RUN dotnet restore "VisitorsTracker.API/VisitorsTracker.API.csproj"
 COPY . .
 WORKDIR "/src/VisitorsTracker.API"
 RUN dotnet build "VisitorsTracker.API.csproj" -c Release -o /app/build
