@@ -4,7 +4,11 @@
         <name>VisitorsTracker.API</name>
     </assembly>
     <members>
-        <!-- Badly formed XML comment ignored for member "M:VisitorsTracker.API.Controllers.TrackerController.Get(System.Int32,System.Int32,System.String,System.String,System.String,System.String)" -->
+        <member name="M:VisitorsTracker.API.Controllers.TrackerController.Get(System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+            Returns the tracked guests, and allow to paginate the result and applying filters.
+            </summary>
+        </member>
         <member name="M:VisitorsTracker.API.Controllers.TrackerController.Create(VisitorsTracker.Models.Guest)">
             <summary>
             Registers one guest.

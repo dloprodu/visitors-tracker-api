@@ -28,7 +28,7 @@ namespace VisitorsTracker.API.Controllers
             _service = service;
         }
 
-        /// <summary
+        /// <summary>
         /// Returns the tracked guests, and allow to paginate the result and applying filters.
         /// </summary>
         [HttpGet, Route("/visits/show")]
