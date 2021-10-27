@@ -39,6 +39,8 @@ namespace VisitorsTracker.API
 
             services.AddScoped<IGuestService, GuestService>();
 
+            services.AddSwaggerGen();
+
             services.AddControllers();
         }
 
@@ -62,6 +64,7 @@ namespace VisitorsTracker.API
                 .AllowCredentials()); // allow credentials
 
             app.UseAuthorization();
+            app.UseSwagger();
 
             app.UseEndpoints(endpoints =>
             {

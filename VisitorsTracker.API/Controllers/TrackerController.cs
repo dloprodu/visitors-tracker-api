@@ -15,7 +15,7 @@ using VisitorsTracker.BLL.Services;
 namespace VisitorsTracker.API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    // [Route("[controller]")]
     public class TrackerController : Controller
     {
 
@@ -29,12 +29,13 @@ namespace VisitorsTracker.API.Controllers
         }
 
         [HttpGet]
+        [Route("/")]
         public ActionResult Ping()
         {
             return Ok("Vistors Tracker API");
         }
 
-        [HttpGet, Route("visits/show")]
+        [HttpGet, Route("/visits/show")]
         public async Task<ActionResult<(long total, List<Guest> result)>> Get(
             [FromQuery] int offset,
             [FromQuery] int limit,
@@ -56,7 +57,7 @@ namespace VisitorsTracker.API.Controllers
             return new OkObjectResult(result);
         }
 
-        [HttpPost, Route("visit")]
+        [HttpPost, Route("/visit")]
         public async Task<ActionResult<Guest>> Create([Required, FromBody] Guest guest)
         {
             try
