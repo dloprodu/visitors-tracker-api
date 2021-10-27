@@ -18,5 +18,7 @@ namespace VisitorsTracker.BLL.Services
         public Task<Guest> GetByIPAsync(string ip);
 
         public Task<Guest> CreateAsync(Guest product);
+
+        public void DeleteAll();
     }
 }

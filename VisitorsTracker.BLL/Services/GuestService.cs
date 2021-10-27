@@ -6,6 +6,7 @@ using VisitorsTracker.DBL.Services;
 using VisitorsTracker.DBL;
 using VisitorsTracker.Models;
 using System;
+using System.Globalization;
 
 namespace VisitorsTracker.BLL.Services
 {
@@ -109,6 +110,11 @@ namespace VisitorsTracker.BLL.Services
                 new FindOneAndReplaceOptions<Guest> { ReturnDocument = ReturnDocument.After });
 
             return result;
+        }
+
+        public void DeleteAll()
+        {
+            _products.DeleteMany(g => true);
         }
     }
 }
