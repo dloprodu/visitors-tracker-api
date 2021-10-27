@@ -28,13 +28,9 @@ namespace VisitorsTracker.API.Controllers
             _service = service;
         }
 
-        [HttpGet]
-        [Route("/")]
-        public ActionResult Ping()
-        {
-            return Ok("Vistors Tracker API");
-        }
-
+        /// <summary
+        /// Returns the tracked guests, and allow to paginate the result and applying filters.
+        /// </summary>
         [HttpGet, Route("/visits/show")]
         public async Task<ActionResult<(long total, List<Guest> result)>> Get(
             [FromQuery] int offset,
@@ -57,6 +53,9 @@ namespace VisitorsTracker.API.Controllers
             return new OkObjectResult(result);
         }
 
+        /// <summary>
+        /// Registers one guest.
+        /// </summary>
         [HttpPost, Route("/visit")]
         public async Task<ActionResult<Guest>> Create([Required, FromBody] Guest guest)
         {

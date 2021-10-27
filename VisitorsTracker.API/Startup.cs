@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -9,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using VisitorsTracker.BLL.Services;
@@ -39,7 +41,19 @@ namespace VisitorsTracker.API
 
             services.AddScoped<IGuestService, GuestService>();
 
-            services.AddSwaggerGen();
+            // Register the Swagger generator, defining 1 or more Swagger documents
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1",
+                    new OpenApiInfo
+                    {
+                        Title = "VisitorsTracker.API - V1",
+                        Version = "v1"
+                    }
+                 );
+                var filePath = Path.Combine(System.AppContext.BaseDirectory, @".\VisitorsTracker.API.xml");
+                c.IncludeXmlComments(filePath);
+            });
 
             services.AddControllers();
         }
@@ -51,6 +65,16 @@ namespace VisitorsTracker.API
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.)
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                c.RoutePrefix = string.Empty;
+            });
 
             app.UseHttpsRedirection();
 
@@ -64,7 +88,6 @@ namespace VisitorsTracker.API
                 .AllowCredentials()); // allow credentials
 
             app.UseAuthorization();
-            app.UseSwagger();
 
             app.UseEndpoints(endpoints =>
             {
