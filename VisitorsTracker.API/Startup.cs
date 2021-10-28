@@ -35,18 +35,7 @@ namespace VisitorsTracker.API
             services.AddScoped<IGuestService, GuestService>();
 
             // Register the Swagger generator, defining 1 or more Swagger documents
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1",
-                    new OpenApiInfo
-                    {
-                        Title = "VisitorsTracker.API - V1",
-                        Version = "v1"
-                    }
-                 );
-                var filePath = Path.Combine(System.AppContext.BaseDirectory, @".\VisitorsTracker.API.xml");
-                c.IncludeXmlComments(filePath);
-            });
+            services.AddSwaggerGen();
 
             services.AddControllers();
         }
