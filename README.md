@@ -25,13 +25,13 @@ API entry point that exposes HTTP methods.
 
 Business Logic Layer. Defines the logic per use case. Each use case must be implemented by inheriting from the BaseActionManager base class. 
 
-BaseActionManager may encapsulate logic common to all implemented use cases, such as unified error handling, data validation or caching, 
+BaseActionManager may encapsulate common logic to all implemented use cases, such as unified error handling, data validation or caching, 
 
 ### 3. VisitorsTracker.DBL
 
 Data Base Layer. Layer in charge of the implementation of the drivers for data storage access. In this case we use as storage CosmosDB with MongoDB interface.
 
-###4. VisitorsTracker.Models
+### 4. VisitorsTracker.Models
 
 Defines the necessary models of the business logic.
 
